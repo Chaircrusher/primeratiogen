@@ -108,11 +108,7 @@ int main(int argc, char **argv) {
 
   // size of scale
   std::cout << " ";
-  if(subset < 0) {
-    std::cout << (v.size()+1);
-  } else {
-    std::cout << subset + 1;
-  }
+  std::cout << ((subset < 0 ? v.size() : subset))+1 << std::endl;
   std::cout << std::endl;
   std::cout << "!" << std::endl;
   // no subset requested, print all
@@ -131,7 +127,7 @@ int main(int argc, char **argv) {
 	std::cout << it->num() << "/" << it->denom() << std::endl;
     }
   }
-  // cap with last note
+  // cap with octave
   std::cout << "2/1" << std::endl;
   return 0;
 }
