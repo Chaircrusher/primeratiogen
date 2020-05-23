@@ -64,7 +64,8 @@ bool alreadyIn(rationalVec &vec, rational &val) {
 int main(int argc, char **argv) {
   if(argc < 2) {
     std::cerr << argv[0];
-    std::cerr << ": Usage: primeratiogen Scalename [PrimeCount]";
+    std::cerr << ": Usage: primeratiogen Scalename [PrimeCount] [SubsetSize]"
+	      << std::endl;
     std::cerr << "missing scale name";
     std::cerr << std::endl;
     return 1;
